@@ -6,7 +6,9 @@ function App() {
       <div className='logo-container'>
         <img src={freeCodeCampLogo} className='freecodecamp-logo' />
       </div>
-      
+      <div className='list-main'>
+        <h1>My Tasks</h1>
+      </div>
     </div>
   );
 }
