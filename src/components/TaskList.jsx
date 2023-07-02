@@ -11,12 +11,16 @@ function TaskList (){
             setTask(taskUpdated);
         }
     }
+    const deleteTask = (id) => {
+        const taskUpdated = tasks.filter(task => task.id !== id);
+        setTask(taskUpdated);
+    }
     return (
         <>
         <TaskForm onSubmit={addTask}/>
         <div className="list-container"> 
             {
-                tasks.map((task) => <Task text={task.text} complete={task.complete} key={task.id} id={task.id} />)
+                tasks.map((task) => <Task text={task.text} complete={task.complete} key={task.id} id={task.id} deleteTask={deleteTask} />)
             }
         </div>
         
